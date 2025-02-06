@@ -76,15 +76,8 @@ Cons ❌
 ✖️ Harder to fine-tune retrieval logic.
 ✖️ May not handle complex queries well if the retrieved documents are not relevant.
 
+![image](https://github.com/user-attachments/assets/6d5ec2ba-20ec-477f-bc56-952c57da8b2a)
 
-
-## 🔍 Key Differences: Retriever + Chain vs. Normal RAG Chatbot
-Feature	Retriever + Chain Chatbot	Normal RAG Chatbot
-Retrieval Method	Uses a retriever + separate chain for better control	Uses retriever + LLM directly
-Modularity	More modular (retriever, chain, LLM separate)	Less modular (retrieval & generation combined)
-Flexibility	Allows custom chains (e.g., adding metadata filtering)	Less flexible (LLM controls retrieval)
-Ease of Setup	Requires defining retriever + chain separately	Easier setup with RetrievalQA
-Performance	Better retrieval quality but slightly slower	Faster but may retrieve less relevant data
 🚀 Which One Should You Use?
 Use Retriever + Chain Chatbot if you need fine-tuned retrieval & response generation.
 Use Normal RAG Chatbot if you want a quick, easy-to-build chatbot.
