@@ -8,7 +8,7 @@ There are two main types of RAG (Retrieval-Augmented Generation) chatbots:
 
 Let’s break them down in detail.
 
-Retriever + Chain Chatbot 🚀
+# Retriever + Chain Chatbot 🚀
 How It Works
 Uses retrievers to fetch relevant documents.
 Uses a chain to pass retrieved data to an LLM for answer generation.
@@ -38,7 +38,7 @@ Cons ❌
 ✖️ Slightly slower because retrieval + response generation happens in steps.
 ✖️ Needs fine-tuning for good retrieval results.
 
-2️⃣ Normal RAG Chatbot 💬
+# 2️⃣ Normal RAG Chatbot 💬
 How It Works
 Uses retrieval-augmented generation (RAG) in a single step.
 The retriever and LLM are combined directly (no chain logic).
