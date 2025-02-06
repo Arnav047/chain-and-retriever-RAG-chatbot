@@ -81,3 +81,16 @@ Cons ❌
 🚀 Which One Should You Use?
 Use Retriever + Chain Chatbot if you need fine-tuned retrieval & response generation.
 Use Normal RAG Chatbot if you want a quick, easy-to-build chatbot.
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/65a804f5-41dd-4d82-a54b-af89aaf6595a)
+
+![image](https://github.com/user-attachments/assets/93eb5b00-a512-44bb-b246-5550045dce58)
+![image](https://github.com/user-attachments/assets/dad02efa-aae3-48f6-89a0-e815cf98bcdb)
+![image](https://github.com/user-attachments/assets/7f40600f-175b-4454-bd15-1c35d230aedc)
