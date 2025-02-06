@@ -94,3 +94,49 @@ Use Normal RAG Chatbot if you want a quick, easy-to-build chatbot.
 ![image](https://github.com/user-attachments/assets/93eb5b00-a512-44bb-b246-5550045dce58)
 ![image](https://github.com/user-attachments/assets/dad02efa-aae3-48f6-89a0-e815cf98bcdb)
 ![image](https://github.com/user-attachments/assets/7f40600f-175b-4454-bd15-1c35d230aedc)
+
+
+
+
+📌 Difference Between create_stuff_documents_chain and create_retrieval_chain
+Both create_stuff_documents_chain and create_retrieval_chain are LangChain components that process documents for LLMs, but they serve different purposes in the retrieval and response generation process.
+
+1️⃣ create_stuff_documents_chain
+This function combines documents into a single prompt and sends them to the LLM.
+
+🔹 Code Example
+python
+Copy
+Edit
+from langchain.chains.combine_documents import create_stuff_documents_chain
+
+document_chain = create_stuff_documents_chain(llm, prompt)
+🔹 What is happening?
+Takes an LLM (llm) and a prompt as input.
+Directly combines the retrieved documents and feeds them into the prompt.
+It follows a simple "stuffing" approach where all documents are put together in one input.
+🔹 When to use?
+When you have a small number of retrieved documents that fit into a single prompt.
+When you want all the context in one go.
+Works well if the LLM can handle large inputs.
+2️⃣ create_retrieval_chain
+This function creates a retrieval-based pipeline that fetches relevant documents before passing them to an LLM.
+
+🔹 Code Example
+python
+Copy
+Edit
+from langchain.chains import create_retrieval_chain
+
+retrieval_chain = create_retrieval_chain(retriever, document_chain)
+🔹 What is happening?
+Uses a retriever to fetch relevant documents based on the query.
+Then, it passes the retrieved documents to document_chain (which then uses stuff_documents_chain).
+Finally, the LLM generates a response based on those retrieved documents.
+🔹 When to use?
+When you have a large document set and only want to retrieve the most relevant ones.
+When you need efficient search + response generation.
+Works well for large knowledge bases or RAG (Retrieval-Augmented Generation) systems.
+
+
+![image](https://github.com/user-attachments/assets/70c55708-f729-4a4a-b1c6-139dbc0ba88e)
