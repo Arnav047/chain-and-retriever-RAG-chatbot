@@ -140,3 +140,18 @@ Works well for large knowledge bases or RAG (Retrieval-Augmented Generation) sys
 
 
 ![image](https://github.com/user-attachments/assets/70c55708-f729-4a4a-b1c6-139dbc0ba88e)
+
+
+
+
+document_chain=create_stuff_documents_chain(llm,prompt)
+ here it combines all the docs and convert it into the format of prompt.
+
+retriever=db.as_retriever()
+retriever
+
+here retriever will fetch all the relevant docs based on the query
+
+retrieval_chain=create_retrieval_chain(retriever,document_chain)
+
+* here the relevent document context based on query is sent to document chain where the conteent is formated based on prompt and then based on that LLM model provdes and ouput
